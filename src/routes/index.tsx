@@ -9,11 +9,11 @@ import elaraImg from "@/assets/elara.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Today with Leo — Lumina" },
+      { title: "Сегодня с Лёвой — Lumina" },
       {
         name: "description",
         content:
-          "Today's Hanen-method routine, your AI coach Elara, and Leo's live development garden — all in one calm home.",
+          "Сегодняшний ритуал по методу Hanen, ваш ИИ-коуч Элара и живой «сад развития» Лёвы — всё в одном спокойном пространстве.",
       },
     ],
   }),
@@ -45,7 +45,7 @@ function ParentHub() {
             <article className="lumina-fade-up relative flex aspect-[16/10] flex-col overflow-hidden rounded-[2.5rem] border border-warm-mist/10 bg-twilight/40 md:aspect-[16/9] md:rounded-[3rem]">
               <img
                 src={heroNursery}
-                alt="Lumi the baby dragon waiting in a magical nursery"
+                alt="Малыш-дракончик Луми в волшебной детской"
                 className="absolute inset-0 size-full object-cover opacity-70 mix-blend-screen"
                 width={1600}
                 height={896}
@@ -57,7 +57,7 @@ function ParentHub() {
                   <div className="max-w-lg space-y-3">
                     <span className="inline-flex items-center gap-2 rounded-full border border-magic-pink/40 bg-magic-pink/15 px-4 py-1 text-[11px] font-bold uppercase tracking-[0.25em] text-magic-pink">
                       <span className="size-1.5 rounded-full bg-magic-pink shadow-[0_0_8px_var(--magic-pink)]" />
-                      Active routine · {activeStep.time}
+                      Активный ритуал · {activeStep.time}
                     </span>
                     <h1 className="text-display text-4xl font-semibold italic leading-tight text-warm-mist md:text-5xl">
                       {activeStep.title}
@@ -69,7 +69,7 @@ function ParentHub() {
                   <div className="flex items-center gap-4">
                     <div className="lumina-glass flex size-20 flex-col items-center justify-center rounded-full text-center">
                       <span className="text-[10px] font-bold uppercase tracking-tight text-teal-glow">
-                        Toy synced
+                        Игрушка
                       </span>
                       <span className="mt-1 size-2 animate-pulse rounded-full bg-teal-glow" />
                     </div>
@@ -77,7 +77,7 @@ function ParentHub() {
                       to="/world"
                       className="rounded-full bg-warm-mist px-6 py-3 text-sm font-bold text-deep-space transition-transform hover:scale-[1.03]"
                     >
-                      Begin together
+                      Начать вместе
                     </Link>
                   </div>
                 </div>
@@ -89,7 +89,7 @@ function ParentHub() {
               <div className="mb-5 flex items-end justify-between">
                 <div>
                   <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-warm-mist/50">
-                    Strategy in play
+                    Стратегия в игре
                   </span>
                   <h2 className="text-display mt-1 text-2xl text-warm-mist md:text-3xl">
                     {activeStrategy.name}
@@ -99,13 +99,13 @@ function ParentHub() {
                   to="/lessons"
                   className="hidden text-xs font-semibold uppercase tracking-widest text-warm-mist/60 hover:text-warm-mist sm:inline"
                 >
-                  Full library →
+                  Вся библиотека →
                 </Link>
               </div>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
                 {activeStrategy.steps.slice(0, 3).map((step, i) => {
                   const palette = [colorMap.teal, colorMap.sunset, colorMap.pink][i];
-                  const labels = ["Observe", "Wait", "Listen"];
+                  const labels = ["Наблюдай", "Жди", "Слушай"];
                   return (
                     <div
                       key={i}
@@ -117,7 +117,7 @@ function ParentHub() {
                         <span className="text-sm font-bold">{i + 1}</span>
                       </div>
                       <h3 className="text-display mb-2 text-xl text-warm-mist">
-                        {labels[i] ?? `Step ${i + 1}`}
+                        {labels[i] ?? `Шаг ${i + 1}`}
                       </h3>
                       <p className="text-sm leading-relaxed text-warm-mist/60">{step}</p>
                     </div>
@@ -131,17 +131,17 @@ function ParentHub() {
               <div className="mb-5 flex items-end justify-between">
                 <div>
                   <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-warm-mist/50">
-                    Today's storyboard
+                    Раскадровка дня
                   </span>
                   <h2 className="text-display mt-1 text-2xl text-warm-mist md:text-3xl">
-                    Five gentle moments
+                    Пять тёплых моментов
                   </h2>
                 </div>
                 <Link
                   to="/routines"
                   className="text-xs font-semibold uppercase tracking-widest text-warm-mist/60 hover:text-warm-mist"
                 >
-                  Plan week →
+                  План на неделю →
                 </Link>
               </div>
               <ol className="space-y-3">
@@ -190,7 +190,7 @@ function ParentHub() {
                 <div className="relative">
                   <img
                     src={elaraImg}
-                    alt="Elara, the AI parent guide"
+                      alt="Элара — ИИ-наставница для родителей"
                     className="size-12 rounded-full object-cover ring-2 ring-lavender/40"
                     loading="lazy"
                     width={96}
@@ -199,9 +199,9 @@ function ParentHub() {
                   <span className="absolute -bottom-0.5 -right-0.5 size-3 rounded-full bg-magic-pink ring-2 ring-deep-space" />
                 </div>
                 <div>
-                  <h3 className="text-display text-xl text-lavender">Elara</h3>
+                    <h3 className="text-display text-xl text-lavender">Элара</h3>
                   <p className="text-[11px] uppercase tracking-widest text-warm-mist/40">
-                    Your AI Hanen coach
+                      Ваш ИИ-коуч по методу Hanen
                   </p>
                 </div>
               </div>
@@ -211,21 +211,21 @@ function ParentHub() {
                   "{elaraTip.text}"
                 </p>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-magic-pink">
-                  Coach tip · {elaraTip.meta}
+                  Совет коуча · {elaraTip.meta}
                 </span>
               </div>
 
               <div className="mt-6 space-y-3">
                 <h4 className="text-[11px] font-bold uppercase tracking-widest text-warm-mist/40">
-                  Try this expansion
+                  Попробуйте расширение
                 </h4>
                 <button className="w-full rounded-2xl border border-warm-mist/10 bg-warm-mist/5 p-4 text-left transition-colors hover:bg-warm-mist/10">
-                  <p className="text-sm text-warm-mist">If Leo says "car":</p>
-                  <p className="font-semibold text-teal-glow">"Big blue car drives!"</p>
+                  <p className="text-sm text-warm-mist">Если Лёва говорит «би-би»:</p>
+                  <p className="font-semibold text-teal-glow">«Большая синяя машинка едет!»</p>
                 </button>
                 <button className="w-full rounded-2xl border border-warm-mist/10 bg-warm-mist/5 p-4 text-left transition-colors hover:bg-warm-mist/10">
-                  <p className="text-sm text-warm-mist">If Leo points to the box:</p>
-                  <p className="font-semibold text-magic-pink">"Open the magic box!"</p>
+                  <p className="text-sm text-warm-mist">Если Лёва показывает на коробку:</p>
+                  <p className="font-semibold text-magic-pink">«Открой волшебную коробку!»</p>
                 </button>
               </div>
 
@@ -233,18 +233,18 @@ function ParentHub() {
                 to="/coach"
                 className="mt-7 inline-flex w-full items-center justify-center rounded-full bg-lavender px-5 py-3 text-sm font-bold text-deep-space transition-transform hover:scale-[1.02]"
               >
-                Open full conversation
+                Открыть весь диалог
               </Link>
             </div>
 
             <div className="lumina-fade-up rounded-[2.5rem] border border-teal-glow/15 bg-gradient-to-br from-teal-glow/12 to-transparent p-7 md:rounded-[3rem] md:p-10 [animation-delay:160ms]">
               <div className="mb-6 flex items-end justify-between">
-                <h3 className="text-display text-xl text-warm-mist">Development garden</h3>
+                <h3 className="text-display text-xl text-warm-mist">Сад развития</h3>
                 <Link
                   to="/progress"
                   className="text-[10px] font-bold uppercase tracking-widest text-warm-mist/50 hover:text-warm-mist"
                 >
-                  Full →
+                  Полностью →
                 </Link>
               </div>
               <div className="space-y-5">

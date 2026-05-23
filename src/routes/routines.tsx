@@ -6,18 +6,18 @@ import { todayRoutine, strategies } from "@/lib/lumina-data";
 export const Route = createFileRoute("/routines")({
   head: () => ({
     meta: [
-      { title: "Daily routines — Lumina" },
+      { title: "Ежедневные ритуалы — Lumina" },
       {
         name: "description",
         content:
-          "A weekly storyboard of Hanen-method play moments built into the rhythm of family life.",
+          "Недельная раскадровка игровых моментов по методу Hanen, встроенных в ритм семейной жизни.",
       },
     ],
   }),
   component: RoutinesRoute,
 });
 
-const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const days = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
 
 const colorChip = {
   teal: "bg-teal-glow/20 text-teal-glow",
@@ -36,17 +36,17 @@ function RoutinesRoute() {
         <header className="lumina-fade-up mb-10 flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
             <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-lavender">
-              Routines as therapy
+              Ритуалы как терапия
             </span>
             <h1 className="text-display mt-3 text-4xl leading-tight md:text-5xl">
-              The same gentle moments, <span className="italic">again and again</span>.
+              Те же тёплые моменты <span className="italic">снова и снова</span>.
             </h1>
             <p className="mt-4 text-lg text-warm-mist/70">
-              Repetition is the secret. Plan five small moments a day — Leo will start filling in the words.
+              Секрет — в повторении. Запланируйте пять маленьких моментов в день — и Лёва начнёт вставлять слова сам.
             </p>
           </div>
           <button className="rounded-full bg-warm-mist px-6 py-3 text-sm font-bold text-deep-space transition-transform hover:scale-[1.03]">
-            + Add a moment
+            + Добавить момент
           </button>
         </header>
 
@@ -62,7 +62,7 @@ function RoutinesRoute() {
                   }`}
                 >
                   {d}
-                  {i === 2 && <span className="ml-1 text-warm-mist/40">· today</span>}
+                  {i === 2 && <span className="ml-1 text-warm-mist/40">· сегодня</span>}
                 </div>
               ))}
             </div>
@@ -122,15 +122,15 @@ function RoutinesRoute() {
 
         <section className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
           <div className="lumina-card p-7">
-            <h3 className="text-display text-xl text-warm-mist">Why this works</h3>
+            <h3 className="text-display text-xl text-warm-mist">Почему это работает</h3>
             <p className="mt-3 text-sm leading-relaxed text-warm-mist/65">
-              ROCK routines turn ordinary moments into language gyms. By repeating the same words in the same context every day, you give Leo dozens of low-pressure chances to practise the same sound.
+              ROCK-ритуалы превращают обычные моменты в «спортзал» для речи. Повторяя одни и те же слова в одном и том же контексте каждый день, вы даёте Лёве десятки спокойных шансов потренировать один и тот же звук.
             </p>
           </div>
           <Link to="/lessons" className="lumina-card group p-7 transition-colors hover:bg-warm-mist/5">
-            <h3 className="text-display text-xl text-warm-mist">Learn the ROCK method →</h3>
+            <h3 className="text-display text-xl text-warm-mist">Изучить метод ROCK →</h3>
             <p className="mt-3 text-sm leading-relaxed text-warm-mist/65">
-              An 8-minute lesson on how to build a daily routine that compounds over a week.
+              8-минутный урок о том, как выстроить ежедневный ритуал, эффект которого накапливается за неделю.
             </p>
           </Link>
         </section>

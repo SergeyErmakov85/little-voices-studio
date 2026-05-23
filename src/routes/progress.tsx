@@ -6,11 +6,11 @@ import { progressMilestones, strategies } from "@/lib/lumina-data";
 export const Route = createFileRoute("/progress")({
   head: () => ({
     meta: [
-      { title: "Leo's development garden — Lumina" },
+      { title: "Сад развития Лёвы — Lumina" },
       {
         name: "description",
         content:
-          "A gentle, honest view of how Leo's communication is unfolding — initiation, word attempts, joint attention.",
+          "Бережный и честный взгляд на то, как раскрывается общение Лёвы — инициатива, попытки слов, совместное внимание.",
       },
     ],
   }),
@@ -29,11 +29,11 @@ const weeks = [
 ];
 
 const newWords = [
-  { word: "baw", meaning: "ball", date: "Tue" },
-  { word: "mo", meaning: "more", date: "Wed" },
-  { word: "go-go", meaning: "let's go", date: "Thu" },
-  { word: "uh-oh", meaning: "uh-oh", date: "Fri" },
-  { word: "nana", meaning: "banana", date: "Sat" },
+  { word: "мя", meaning: "мяч", date: "Вт" },
+  { word: "ещ", meaning: "ещё", date: "Ср" },
+  { word: "топ-топ", meaning: "пойдём", date: "Чт" },
+  { word: "оп-па", meaning: "ой!", date: "Пт" },
+  { word: "бана", meaning: "банан", date: "Сб" },
 ];
 
 function ProgressRoute() {
@@ -46,13 +46,13 @@ function ProgressRoute() {
       <main className="relative z-10 mx-auto max-w-7xl px-6 pb-24 md:px-12">
         <header className="lumina-fade-up mb-12 max-w-3xl">
           <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-teal-glow">
-            8 weeks of you & Leo
+            8 недель вы и Лёва
           </span>
           <h1 className="text-display mt-3 text-4xl leading-tight md:text-5xl">
-            The garden is <span className="italic">blooming</span>.
+            Сад <span className="italic">расцветает</span>.
           </h1>
           <p className="mt-5 text-lg text-warm-mist/70">
-            This isn't a test. It's a quiet portrait of how often Leo reaches for connection — and how often you answer.
+            Это не тест. Это тихий портрет того, как часто Лёва тянется к контакту — и как часто вы откликаетесь.
           </p>
         </header>
 
@@ -79,14 +79,14 @@ function ProgressRoute() {
           <div className="mb-8 flex items-end justify-between">
             <div>
               <span className="text-[10px] font-bold uppercase tracking-widest text-warm-mist/40">
-                Growth chart
+                График роста
               </span>
-              <h2 className="text-display mt-1 text-2xl text-warm-mist">Last 8 weeks</h2>
+              <h2 className="text-display mt-1 text-2xl text-warm-mist">Последние 8 недель</h2>
             </div>
             <div className="hidden gap-4 text-[11px] uppercase tracking-widest text-warm-mist/60 md:flex">
-              <Legend color="bg-teal-glow" label="Initiation" />
-              <Legend color="bg-magic-pink" label="Word attempts" />
-              <Legend color="bg-lavender" label="Joint attention" />
+              <Legend color="bg-teal-glow" label="Инициатива" />
+              <Legend color="bg-magic-pink" label="Попытки слов" />
+              <Legend color="bg-lavender" label="Совместное внимание" />
             </div>
           </div>
 
@@ -108,9 +108,9 @@ function ProgressRoute() {
 
         <section className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
           <div className="lumina-card lumina-fade-up border-magic-pink/20 bg-magic-pink/5 p-7 md:p-10">
-            <h3 className="text-display text-2xl text-warm-mist">New words this week</h3>
+            <h3 className="text-display text-2xl text-warm-mist">Новые слова за неделю</h3>
             <p className="mt-1 text-sm text-warm-mist/60">
-              Approximations count. Every "baw" is a draft of "ball".
+              Приближения тоже считаются. Каждое «мя» — черновик слова «мяч».
             </p>
             <ul className="mt-6 divide-y divide-warm-mist/10">
               {newWords.map((nw) => (
@@ -130,9 +130,9 @@ function ProgressRoute() {
           </div>
 
           <div className="lumina-card lumina-fade-up p-7 md:p-10">
-            <h3 className="text-display text-2xl text-warm-mist">Strategy use by you</h3>
+            <h3 className="text-display text-2xl text-warm-mist">Использование стратегий вами</h3>
             <p className="mt-1 text-sm text-warm-mist/60">
-              Where you're spending your coaching minutes this week.
+              На что уходят ваши минуты коучинга на этой неделе.
             </p>
             <div className="mt-6 space-y-4">
               {strategies.map((s, i) => {
