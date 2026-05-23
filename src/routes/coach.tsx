@@ -8,11 +8,11 @@ import elaraImg from "@/assets/elara.jpg";
 export const Route = createFileRoute("/coach")({
   head: () => ({
     meta: [
-      { title: "Talk to Elara — your AI Hanen coach" },
+      { title: "Поговорить с Эларой — ваш ИИ-коуч по методу Hanen" },
       {
         name: "description",
         content:
-          "A warm, private space to ask your AI parent coach about what just happened in play — and what to try next.",
+          "Тёплое, личное пространство, где можно спросить ИИ-коуча о том, что только что произошло в игре, и что попробовать дальше.",
       },
     ],
   }),
@@ -20,10 +20,10 @@ export const Route = createFileRoute("/coach")({
 });
 
 const elaraReplies = [
-  "That's a beautiful observation. Try giving Leo a five-second pause the very next time he reaches for a toy — count the pause silently. Then label the toy with just one stressed word.",
-  "I'd treat that grunt as a sentence. Reply with two words that match what you think he meant: 'More juice?' Then wait again. Repetition is the magic here.",
-  "Lovely instinct. Let's turn that moment into a small ROCK routine: same words, same actions, every day for a week. I'll set you a reminder for tomorrow.",
-  "Don't worry — quiet days are part of the rhythm. Tonight, try the bath-time SPARK: hand him an empty cup so he has to ask for water. One word, warmly stressed.",
+  "Какое чудесное наблюдение. В следующий раз, когда Лёва потянется к игрушке, попробуйте пятисекундную паузу — отсчитайте её про себя. А затем назовите игрушку одним подчёркнутым словом.",
+  "Я бы отнеслась к этому мычанию как к целому предложению. Ответьте двумя словами в том смысле, который, как вам кажется, он вложил: «Ещё сок?» И снова подождите. Магия — в повторении.",
+  "Прекрасная интуиция. Давайте превратим этот момент в маленький ROCK-ритуал: те же слова, те же действия каждый день в течение недели. Я поставлю напоминание на завтра.",
+  "Не переживайте — тихие дни тоже часть ритма. Сегодня перед сном попробуйте SPARK в ванной: дайте ему пустую чашку, чтобы он попросил воды. Одно слово, тепло выделенное.",
 ];
 
 function CoachRoute() {
@@ -62,22 +62,22 @@ function CoachRoute() {
           <header className="flex items-center gap-4 border-b border-warm-mist/10 px-6 py-5">
             <img
               src={elaraImg}
-              alt="Elara"
+              alt="Элара"
               className="size-12 rounded-full object-cover ring-2 ring-lavender/40"
               width={96}
               height={96}
               loading="lazy"
             />
             <div className="flex-1">
-              <h1 className="text-display text-xl text-lavender">Elara</h1>
+              <h1 className="text-display text-xl text-lavender">Элара</h1>
               <p className="text-[11px] uppercase tracking-widest text-warm-mist/50">
-                Hanen-trained · listens to your play sessions
+                Обучена методу Hanen · слушает ваши игровые сессии
               </p>
             </div>
             <span className="lumina-glass flex items-center gap-2 rounded-full px-3 py-1.5">
               <span className="size-2 animate-pulse rounded-full bg-teal-glow" />
               <span className="text-[10px] font-bold uppercase tracking-widest text-teal-glow">
-                Listening
+                Слушает
               </span>
             </span>
           </header>
@@ -118,14 +118,14 @@ function CoachRoute() {
                   }
                 }}
                 rows={2}
-                placeholder="Tell Elara what just happened in play…"
+                placeholder="Расскажите Эларе, что только что было в игре…"
                 className="min-h-12 flex-1 resize-none bg-transparent px-3 py-2 text-sm text-warm-mist placeholder:text-warm-mist/40 focus:outline-none"
               />
               <button
                 onClick={send}
                 className="rounded-full bg-lavender px-5 py-2.5 text-sm font-bold text-deep-space transition-transform hover:scale-[1.03]"
               >
-                Send
+                Отправить
               </button>
             </div>
           </div>
@@ -133,13 +133,13 @@ function CoachRoute() {
 
         <aside className="space-y-5">
           <div className="lumina-card p-6">
-            <h2 className="text-display text-lg text-warm-mist">Quick prompts</h2>
+            <h2 className="text-display text-lg text-warm-mist">Быстрые подсказки</h2>
             <div className="mt-4 space-y-2">
               {[
-                "He didn't make a sound at breakfast.",
-                "He said 'baw' for the first time!",
-                "Bath time felt loud — what should I change?",
-                "Suggest tonight's SPARK moment.",
+                "За завтраком он не издал ни звука.",
+                "Он впервые сказал «мя»!",
+                "Купание было слишком громким — что изменить?",
+                "Подскажи SPARK-момент на вечер.",
               ].map((p) => (
                 <button
                   key={p}
@@ -153,7 +153,7 @@ function CoachRoute() {
           </div>
 
           <div className="lumina-card border-magic-pink/20 bg-magic-pink/5 p-6">
-            <h3 className="text-display text-lg text-warm-mist">Strategies Elara may suggest</h3>
+            <h3 className="text-display text-lg text-warm-mist">Стратегии, которые может предложить Элара</h3>
             <ul className="mt-3 space-y-2 text-sm text-warm-mist/70">
               {strategies.map((s) => (
                 <li key={s.id} className="flex items-center justify-between">

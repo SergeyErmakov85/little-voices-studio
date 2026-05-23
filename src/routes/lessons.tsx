@@ -7,11 +7,11 @@ import playHands from "@/assets/play-hands.jpg";
 export const Route = createFileRoute("/lessons")({
   head: () => ({
     meta: [
-      { title: "Hanen lesson library — Lumina" },
+      { title: "Библиотека уроков по методу Hanen — Lumina" },
       {
         name: "description",
         content:
-          "Bite-sized lessons grounded in the Hanen It Takes Two to Talk method — OWL, 4S, ROCK and SPARK — written for tired parents.",
+          "Короткие уроки на основе метода Hanen «Чтобы говорить, нужны двое» — OWL, 4S, ROCK и SPARK — написанные для уставших родителей.",
       },
     ],
   }),
@@ -34,18 +34,18 @@ function LessonLibrary() {
       <main className="relative z-10 px-6 pb-24 md:px-12">
         <header className="lumina-fade-up mb-12 max-w-3xl">
           <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-sunset">
-            The Hanen library
+            Библиотека Hanen
           </span>
           <h1 className="text-display mt-3 text-4xl leading-tight md:text-5xl">
-            Small lessons. <span className="italic">Big shifts</span> in how you talk together.
+            Маленькие уроки. <span className="italic">Большие сдвиги</span> в том, как вы говорите вместе.
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-warm-mist/70">
-            Every lesson is under ten minutes and ends with a single thing to try in real play today.
+            Каждый урок — меньше десяти минут и заканчивается одним конкретным шагом, который можно попробовать в реальной игре уже сегодня.
           </p>
         </header>
 
         <section className="lumina-fade-up mb-14 [animation-delay:80ms]">
-          <h2 className="text-display mb-6 text-2xl text-warm-mist">Four strategies, one method</h2>
+          <h2 className="text-display mb-6 text-2xl text-warm-mist">Четыре стратегии, один метод</h2>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
             {strategies.map((s) => (
               <div key={s.id} className="lumina-card p-6">
@@ -60,7 +60,7 @@ function LessonLibrary() {
         </section>
 
         <section className="lumina-fade-up [animation-delay:160ms]">
-          <h2 className="text-display mb-6 text-2xl text-warm-mist">All lessons</h2>
+          <h2 className="text-display mb-6 text-2xl text-warm-mist">Все уроки</h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {lessons.map((l) => {
               const s = strategies.find((st) => st.id === l.strategyId)!;

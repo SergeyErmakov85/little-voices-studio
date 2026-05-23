@@ -34,9 +34,9 @@ export const Route = createFileRoute("/lessons/$lessonId")({
   notFoundComponent: () => (
     <div className="grid min-h-screen place-items-center bg-deep-space text-warm-mist">
       <div className="text-center">
-        <p className="text-display text-2xl italic">This lesson hasn't been written yet.</p>
+        <p className="text-display text-2xl italic">Этот урок ещё не написан.</p>
         <Link to="/lessons" className="mt-4 inline-block text-magic-pink underline">
-          Back to the library
+          Назад в библиотеку
         </Link>
       </div>
     </div>
@@ -44,7 +44,7 @@ export const Route = createFileRoute("/lessons/$lessonId")({
 });
 
 function LessonDetail() {
-  const { lesson, strategy } = Route.useLoaderData();
+  const { lesson, strategy } = Route.useLoaderData() as { lesson: Lesson; strategy: Strategy };
   const palette = colorChip[strategy.color];
 
   return (
@@ -57,7 +57,7 @@ function LessonDetail() {
           to="/lessons"
           className="text-xs font-bold uppercase tracking-[0.25em] text-warm-mist/50 hover:text-warm-mist"
         >
-          ← Lesson library
+          ← Библиотека уроков
         </Link>
 
         <header className="lumina-fade-up mt-6">
@@ -74,7 +74,7 @@ function LessonDetail() {
           <div className="relative aspect-video w-full">
             <img
               src={playHands}
-              alt="A parent and child playing together with glowing wooden blocks"
+              alt="Родитель и ребёнок играют вместе светящимися деревянными кубиками"
               className="absolute inset-0 size-full object-cover"
               loading="lazy"
               width={1200}
@@ -92,12 +92,12 @@ function LessonDetail() {
 
         <div className="lumina-fade-up [animation-delay:160ms] mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
           <article className="md:col-span-2 lumina-card p-8">
-            <h2 className="text-display text-2xl text-warm-mist">What this lesson is really about</h2>
+            <h2 className="text-display text-2xl text-warm-mist">О чём на самом деле этот урок</h2>
             <p className="mt-4 text-base leading-relaxed text-warm-mist/75">{lesson.body}</p>
 
-            <h3 className="text-display mt-8 text-xl text-warm-mist">The strategy, step by step</h3>
+            <h3 className="text-display mt-8 text-xl text-warm-mist">Стратегия шаг за шагом</h3>
             <ol className="mt-4 space-y-3">
-              {strategy.steps.map((step, i) => (
+              {strategy.steps.map((step: string, i: number) => (
                 <li key={i} className="flex gap-4 rounded-2xl border border-warm-mist/10 bg-warm-mist/5 p-4">
                   <span className={`text-display grid size-9 shrink-0 place-items-center rounded-full ${palette}`}>
                     {i + 1}
@@ -110,7 +110,7 @@ function LessonDetail() {
 
           <aside className="lumina-card border-magic-pink/30 bg-magic-pink/5 p-8">
             <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-magic-pink">
-              Try this in real play
+              Попробуйте в реальной игре
             </span>
             <p className="text-display mt-3 text-xl italic leading-snug text-warm-mist">
               {lesson.tryThis}
@@ -118,14 +118,14 @@ function LessonDetail() {
             <div className="mt-6 flex items-center gap-2 rounded-full border border-teal-glow/30 bg-teal-glow/10 px-4 py-2">
               <span className="size-2 animate-pulse rounded-full bg-teal-glow" />
               <span className="text-[10px] font-bold uppercase tracking-widest text-teal-glow">
-                Toy sync ready
+                Игрушка готова к синхронизации
               </span>
             </div>
             <Link
               to="/world"
               className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-warm-mist px-5 py-3 text-sm font-bold text-deep-space transition-transform hover:scale-[1.02]"
             >
-              Start a play session
+              Начать игровую сессию
             </Link>
           </aside>
         </div>

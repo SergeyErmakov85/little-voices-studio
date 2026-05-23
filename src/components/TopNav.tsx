@@ -1,12 +1,12 @@
 import { Link } from "@tanstack/react-router";
 
 const links = [
-  { to: "/", label: "Today" },
-  { to: "/world", label: "Leo's World" },
-  { to: "/routines", label: "Routines" },
-  { to: "/lessons", label: "Lessons" },
-  { to: "/coach", label: "Coach" },
-  { to: "/progress", label: "Progress" },
+  { to: "/", label: "Сегодня" },
+  { to: "/world", label: "Мир Лёвы" },
+  { to: "/routines", label: "Ритуалы" },
+  { to: "/lessons", label: "Уроки" },
+  { to: "/coach", label: "Коуч" },
+  { to: "/progress", label: "Прогресс" },
 ] as const;
 
 export function TopNav() {
@@ -21,7 +21,7 @@ export function TopNav() {
             Lumina
           </span>
           <span className="text-[10px] uppercase tracking-[0.25em] text-warm-mist/50">
-            It Takes Two to Talk
+            Чтобы говорить, нужны двое
           </span>
         </div>
       </Link>
@@ -54,7 +54,7 @@ export function TopNav() {
         </div>
         <div className="h-4 w-px bg-warm-mist/20" />
         <span className="text-xs font-medium text-warm-mist/80">
-          Leo · <span className="text-teal-glow">The Discoverer</span>
+          Лёва · <span className="text-teal-glow">Первооткрыватель</span>
         </span>
       </div>
     </nav>

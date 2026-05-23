@@ -9,7 +9,7 @@ export function MagicBar() {
           <span className="relative inline-flex size-2.5 rounded-full bg-teal-glow shadow-[0_0_12px_var(--teal-glow)]" />
         </span>
         <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-teal-glow">
-          Toy synced
+          Игрушка на связи
         </span>
       </div>
       <div className="h-5 w-px bg-warm-mist/15" />
@@ -17,13 +17,13 @@ export function MagicBar() {
         to="/world"
         className="rounded-full bg-warm-mist px-5 py-2 text-sm font-bold text-deep-space transition-transform hover:scale-[1.03]"
       >
-        Enter Leo's World
+        Войти в мир Лёвы
       </Link>
       <Link
         to="/coach"
         className="hidden rounded-full border border-warm-mist/20 px-5 py-2 text-sm font-medium text-warm-mist transition-colors hover:bg-warm-mist/10 sm:inline-flex"
       >
-        Ask Elara
+        Спросить Элару
       </Link>
     </div>
   );
