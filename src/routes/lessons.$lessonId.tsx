@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { AmbientBackground } from "@/components/AmbientBackground";
 import { TopNav } from "@/components/TopNav";
-import { lessons, strategies } from "@/lib/lumina-data";
+import { lessons, strategies, type Lesson, type Strategy } from "@/lib/lumina-data";
 import playHands from "@/assets/play-hands.jpg";
 
 const colorChip = {
@@ -12,7 +12,7 @@ const colorChip = {
 } as const;
 
 export const Route = createFileRoute("/lessons/$lessonId")({
-  loader: ({ params }) => {
+  loader: ({ params }): { lesson: Lesson; strategy: Strategy } => {
     const lesson = lessons.find((l) => l.id === params.lessonId);
     if (!lesson) throw notFound();
     const strategy = strategies.find((s) => s.id === lesson.strategyId)!;
