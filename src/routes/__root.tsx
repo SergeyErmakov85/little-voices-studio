@@ -72,14 +72,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Lumina — Speech development through play, for toddlers 2.5–4" },
+      {
+        name: "description",
+        content:
+          "Lumina is a parent-coached, AI-guided speech development platform for toddlers, built on the Hanen It Takes Two to Talk method. Cinematic magical world, real-toy synchronisation, daily routines.",
+      },
+      { name: "author", content: "Lumina" },
+      { property: "og:title", content: "Lumina — Speech development through play" },
+      {
+        property: "og:description",
+        content:
+          "A Pixar-warm, parent-implemented therapy platform for toddlers using the Hanen It Takes Two to Talk method.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "theme-color", content: "#2B1E3F" },
     ],
     links: [
       {
