@@ -44,7 +44,7 @@ export const Route = createFileRoute("/lessons/$lessonId")({
 });
 
 function LessonDetail() {
-  const { lesson, strategy } = Route.useLoaderData();
+  const { lesson, strategy } = Route.useLoaderData() as { lesson: Lesson; strategy: Strategy };
   const palette = colorChip[strategy.color];
 
   return (
@@ -97,7 +97,7 @@ function LessonDetail() {
 
             <h3 className="text-display mt-8 text-xl text-warm-mist">Стратегия шаг за шагом</h3>
             <ol className="mt-4 space-y-3">
-              {strategy.steps.map((step, i) => (
+              {strategy.steps.map((step: string, i: number) => (
                 <li key={i} className="flex gap-4 rounded-2xl border border-warm-mist/10 bg-warm-mist/5 p-4">
                   <span className={`text-display grid size-9 shrink-0 place-items-center rounded-full ${palette}`}>
                     {i + 1}
