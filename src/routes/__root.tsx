@@ -79,7 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Lumina — это платформа развития речи малышей с ИИ-коучингом для родителей, основанная на методе Hanen «Чтобы говорить, нужны двое». Кинематографичный волшебный мир, синхронизация с реальными игрушками и ежедневные ритуалы.",
       },
       { name: "author", content: "Lumina" },
-      { property: "og:title", content: "Lumina — Развитие речи через игру" },
+      { property: "og:title", content: "Lumina — Развитие речи через игру, для детей 2,5–4 лет" },
       {
         property: "og:description",
         content:
@@ -88,6 +88,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "theme-color", content: "#2B1E3F" },
+      { name: "twitter:title", content: "Lumina — Развитие речи через игру, для детей 2,5–4 лет" },
+      { name: "description", content: "Little Voices Studio is an AI-powered platform for toddler speech and communication development." },
+      { property: "og:description", content: "Little Voices Studio is an AI-powered platform for toddler speech and communication development." },
+      { name: "twitter:description", content: "Little Voices Studio is an AI-powered platform for toddler speech and communication development." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/da7aa319-da68-42c0-b4f0-f872a500979e/id-preview-cdabd51b--9124a51e-f21e-43a7-8326-684ccbc83c73.lovable.app-1779567677349.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/da7aa319-da68-42c0-b4f0-f872a500979e/id-preview-cdabd51b--9124a51e-f21e-43a7-8326-684ccbc83c73.lovable.app-1779567677349.png" },
     ],
     links: [
       {
