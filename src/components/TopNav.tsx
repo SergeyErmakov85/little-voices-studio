@@ -54,7 +54,7 @@ export function TopNav() {
         </div>
         <div className="h-4 w-px bg-warm-mist/20" />
         <span className="text-xs font-medium text-warm-mist/80">
-          Лёва · <span className="text-teal-glow">Первооткрыватель</span>
+          Мартин · <span className="text-teal-glow">Первооткрыватель</span>
         </span>
       </div>
     </nav>

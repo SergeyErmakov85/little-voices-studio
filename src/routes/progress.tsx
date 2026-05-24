@@ -46,13 +46,13 @@ function ProgressRoute() {
       <main className="relative z-10 mx-auto max-w-7xl px-6 pb-24 md:px-12">
         <header className="lumina-fade-up mb-12 max-w-3xl">
           <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-teal-glow">
-            8 недель вы и Лёва
+            8 недель вы и Мартин
           </span>
           <h1 className="text-display mt-3 text-4xl leading-tight md:text-5xl">
             Сад <span className="italic">расцветает</span>.
           </h1>
           <p className="mt-5 text-lg text-warm-mist/70">
-            Это не тест. Это тихий портрет того, как часто Лёва тянется к контакту — и как часто вы откликаетесь.
+            Это не тест. Это тихий портрет того, как часто Мартин тянется к контакту — и как часто вы откликаетесь.
           </p>
         </header>
 

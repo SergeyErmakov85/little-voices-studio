@@ -157,7 +157,7 @@ function ChildWorld() {
           <Link to="/coach" className="lumina-card group p-6 transition-colors hover:bg-warm-mist/5">
             <h3 className="text-display mb-2 text-lg text-warm-mist">Нужна подсказка?</h3>
             <p className="text-sm text-warm-mist/65 leading-relaxed">
-              Попросите Элару предложить следующий ход по методу 4S, исходя из того, что только что сделал Лёва. →
+              Попросите Элару предложить следующий ход по методу 4S, исходя из того, что только что сделал Мартин. →
             </p>
           </Link>
         </div>

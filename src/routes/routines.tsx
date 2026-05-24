@@ -42,7 +42,7 @@ function RoutinesRoute() {
               Те же тёплые моменты <span className="italic">снова и снова</span>.
             </h1>
             <p className="mt-4 text-lg text-warm-mist/70">
-              Секрет — в повторении. Запланируйте пять маленьких моментов в день — и Лёва начнёт вставлять слова сам.
+              Секрет — в повторении. Запланируйте пять маленьких моментов в день — и Мартин начнёт вставлять слова сам.
             </p>
           </div>
           <button className="rounded-full bg-warm-mist px-6 py-3 text-sm font-bold text-deep-space transition-transform hover:scale-[1.03]">

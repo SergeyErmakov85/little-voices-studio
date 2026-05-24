@@ -220,11 +220,11 @@ function ParentHub() {
                   Попробуйте расширение
                 </h4>
                 <button className="w-full rounded-2xl border border-warm-mist/10 bg-warm-mist/5 p-4 text-left transition-colors hover:bg-warm-mist/10">
-                  <p className="text-sm text-warm-mist">Если Лёва говорит «би-би»:</p>
+                  <p className="text-sm text-warm-mist">Если Мартин говорит «би-би»:</p>
                   <p className="font-semibold text-teal-glow">«Большая синяя машинка едет!»</p>
                 </button>
                 <button className="w-full rounded-2xl border border-warm-mist/10 bg-warm-mist/5 p-4 text-left transition-colors hover:bg-warm-mist/10">
-                  <p className="text-sm text-warm-mist">Если Лёва показывает на коробку:</p>
+                  <p className="text-sm text-warm-mist">Если Мартин показывает на коробку:</p>
                   <p className="font-semibold text-magic-pink">«Открой волшебную коробку!»</p>
                 </button>
               </div>
