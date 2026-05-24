@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { AmbientBackground } from "@/components/AmbientBackground";
 import { TopNav } from "@/components/TopNav";
 import worldForest from "@/assets/world-forest.jpg";
@@ -23,18 +23,39 @@ export const Route = createFileRoute("/world")({
 type Glow = {
   id: string;
   label: string;
-  word: string;
+  word: string;   // display text on the card (with emphasis marks)
+  speech: string; // clean text for text-to-speech
   x: string;
   y: string;
   color: "pink" | "teal" | "lavender" | "sunset";
 };
 
 const glows: Glow[] = [
-  { id: "mushroom", label: "Грибочек", word: "ГРИ-бок!", x: "12%", y: "62%", color: "pink" },
-  { id: "firefly", label: "Светлячок", word: "Свет!", x: "40%", y: "30%", color: "sunset" },
-  { id: "fox", label: "Лисёнок Луми", word: "Привет, лисёнок!", x: "62%", y: "55%", color: "lavender" },
-  { id: "log", label: "Мшистое бревно", word: "Сядь!", x: "78%", y: "78%", color: "teal" },
+  { id: "mushroom", label: "Грибочек",     word: "ГРИ-бок!",         speech: "Грибок",          x: "12%", y: "62%", color: "pink" },
+  { id: "firefly",  label: "Светлячок",    word: "Свет!",             speech: "Свет",             x: "40%", y: "30%", color: "sunset" },
+  { id: "fox",      label: "Лисёнок Луми", word: "Привет, лисёнок!",  speech: "Привет, лисёнок", x: "62%", y: "55%", color: "lavender" },
+  { id: "log",      label: "Мшистое бревно", word: "Сядь!",           speech: "Сядь",             x: "78%", y: "78%", color: "teal" },
 ];
+
+function speak(text: string) {
+  if (!("speechSynthesis" in window)) return;
+
+  // Cancel any word currently being spoken
+  window.speechSynthesis.cancel();
+
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = "ru-RU";
+  utterance.rate = 0.78;   // warm, unhurried — right for a toddler's ear
+  utterance.pitch = 1.05;  // slightly warm, not robotic
+  utterance.volume = 1;
+
+  // Prefer a Russian voice if the browser has one
+  const voices = window.speechSynthesis.getVoices();
+  const ruVoice = voices.find((v) => v.lang.startsWith("ru"));
+  if (ruVoice) utterance.voice = ruVoice;
+
+  window.speechSynthesis.speak(utterance);
+}
 
 const colorRing = {
   pink: "bg-magic-pink shadow-[0_0_30px_var(--magic-pink)]",
@@ -47,8 +68,20 @@ function ChildWorld() {
   const [active, setActive] = useState<Glow | null>(null);
   const [sparkles, setSparkles] = useState<{ id: number; x: string; y: string }[]>([]);
 
+  // Some browsers (Chrome, Safari) load voices asynchronously.
+  // Calling getVoices() once on mount warms up the list so speak() can pick a Russian voice.
+  const initVoices = useCallback(() => {
+    if ("speechSynthesis" in window) {
+      window.speechSynthesis.getVoices();
+    }
+  }, []);
+
+  // Warm up voices on mount — Chrome/Safari load them asynchronously
+  useEffect(() => { initVoices(); }, [initVoices]);
+
   const onTap = (g: Glow) => {
     setActive(g);
+    speak(g.speech);
     const id = Date.now();
     setSparkles((s) => [...s, { id, x: g.x, y: g.y }]);
     setTimeout(() => setSparkles((s) => s.filter((sp) => sp.id !== id)), 1400);
