@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as WorldRouteImport } from './routes/world'
 import { Route as RoutinesRouteImport } from './routes/routines'
 import { Route as ProgressRouteImport } from './routes/progress'
+import { Route as MethodRouteImport } from './routes/method'
 import { Route as LessonsRouteImport } from './routes/lessons'
 import { Route as CoachRouteImport } from './routes/coach'
 import { Route as IndexRouteImport } from './routes/index'
@@ -30,6 +31,11 @@ const RoutinesRoute = RoutinesRouteImport.update({
 const ProgressRoute = ProgressRouteImport.update({
   id: '/progress',
   path: '/progress',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MethodRoute = MethodRouteImport.update({
+  id: '/method',
+  path: '/method',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LessonsRoute = LessonsRouteImport.update({
@@ -57,6 +63,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/coach': typeof CoachRoute
   '/lessons': typeof LessonsRouteWithChildren
+  '/method': typeof MethodRoute
   '/progress': typeof ProgressRoute
   '/routines': typeof RoutinesRoute
   '/world': typeof WorldRoute
@@ -66,6 +73,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/coach': typeof CoachRoute
   '/lessons': typeof LessonsRouteWithChildren
+  '/method': typeof MethodRoute
   '/progress': typeof ProgressRoute
   '/routines': typeof RoutinesRoute
   '/world': typeof WorldRoute
@@ -76,6 +84,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/coach': typeof CoachRoute
   '/lessons': typeof LessonsRouteWithChildren
+  '/method': typeof MethodRoute
   '/progress': typeof ProgressRoute
   '/routines': typeof RoutinesRoute
   '/world': typeof WorldRoute
@@ -87,6 +96,7 @@ export interface FileRouteTypes {
     | '/'
     | '/coach'
     | '/lessons'
+    | '/method'
     | '/progress'
     | '/routines'
     | '/world'
@@ -96,6 +106,7 @@ export interface FileRouteTypes {
     | '/'
     | '/coach'
     | '/lessons'
+    | '/method'
     | '/progress'
     | '/routines'
     | '/world'
@@ -105,6 +116,7 @@ export interface FileRouteTypes {
     | '/'
     | '/coach'
     | '/lessons'
+    | '/method'
     | '/progress'
     | '/routines'
     | '/world'
@@ -115,6 +127,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CoachRoute: typeof CoachRoute
   LessonsRoute: typeof LessonsRouteWithChildren
+  MethodRoute: typeof MethodRoute
   ProgressRoute: typeof ProgressRoute
   RoutinesRoute: typeof RoutinesRoute
   WorldRoute: typeof WorldRoute
@@ -141,6 +154,13 @@ declare module '@tanstack/react-router' {
       path: '/progress'
       fullPath: '/progress'
       preLoaderRoute: typeof ProgressRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/method': {
+      id: '/method'
+      path: '/method'
+      fullPath: '/method'
+      preLoaderRoute: typeof MethodRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/lessons': {
@@ -189,6 +209,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CoachRoute: CoachRoute,
   LessonsRoute: LessonsRouteWithChildren,
+  MethodRoute: MethodRoute,
   ProgressRoute: ProgressRoute,
   RoutinesRoute: RoutinesRoute,
   WorldRoute: WorldRoute,

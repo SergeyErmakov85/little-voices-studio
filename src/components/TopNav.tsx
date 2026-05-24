@@ -5,6 +5,7 @@ const links = [
   { to: "/world", label: "Мир Мартина" },
   { to: "/routines", label: "Ритуалы" },
   { to: "/lessons", label: "Уроки" },
+  { to: "/method", label: "Метод" },
   { to: "/coach", label: "Коуч" },
   { to: "/progress", label: "Прогресс" },
 ] as const;
