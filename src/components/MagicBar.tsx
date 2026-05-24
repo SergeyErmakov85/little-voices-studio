@@ -17,7 +17,7 @@ export function MagicBar() {
         to="/world"
         className="rounded-full bg-warm-mist px-5 py-2 text-sm font-bold text-deep-space transition-transform hover:scale-[1.03]"
       >
-        Войти в мир Лёвы
+        Войти в мир Мартина
       </Link>
       <Link
         to="/coach"

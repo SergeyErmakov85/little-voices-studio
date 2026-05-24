@@ -6,11 +6,11 @@ import { progressMilestones, strategies } from "@/lib/lumina-data";
 export const Route = createFileRoute("/progress")({
   head: () => ({
     meta: [
-      { title: "Сад развития Лёвы — Lumina" },
+      { title: "Сад развития Мартина — Lumina" },
       {
         name: "description",
         content:
-          "Бережный и честный взгляд на то, как раскрывается общение Лёвы — инициатива, попытки слов, совместное внимание.",
+          "Бережный и честный взгляд на то, как раскрывается общение Мартина — инициатива, попытки слов, совместное внимание.",
       },
     ],
   }),

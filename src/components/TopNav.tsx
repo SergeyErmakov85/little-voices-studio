@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 
 const links = [
   { to: "/", label: "Сегодня" },
-  { to: "/world", label: "Мир Лёвы" },
+  { to: "/world", label: "Мир Мартина" },
   { to: "/routines", label: "Ритуалы" },
   { to: "/lessons", label: "Уроки" },
   { to: "/coach", label: "Коуч" },

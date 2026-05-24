@@ -124,7 +124,7 @@ function RoutinesRoute() {
           <div className="lumina-card p-7">
             <h3 className="text-display text-xl text-warm-mist">Почему это работает</h3>
             <p className="mt-3 text-sm leading-relaxed text-warm-mist/65">
-              ROCK-ритуалы превращают обычные моменты в «спортзал» для речи. Повторяя одни и те же слова в одном и том же контексте каждый день, вы даёте Лёве десятки спокойных шансов потренировать один и тот же звук.
+              ROCK-ритуалы превращают обычные моменты в «спортзал» для речи. Повторяя одни и те же слова в одном и том же контексте каждый день, вы даёте Мартину десятки спокойных шансов потренировать один и тот же звук.
             </p>
           </div>
           <Link to="/lessons" className="lumina-card group p-7 transition-colors hover:bg-warm-mist/5">
